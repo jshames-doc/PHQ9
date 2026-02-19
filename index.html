@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>PHQ-9 Depression Screening</title>
+    <title>PHQ-3 Depression Screening</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +29,7 @@
             <div class="score-display">
                 <span data-i18n="score_label">Score</span>
                 <span class="score-badge">
-                    <span id="total-score">0</span><span class="score-max">/27</span>
+                    <span id="total-score">0</span><span class="score-max">/9</span>
                 </span>
             </div>
         </div>
@@ -37,23 +39,26 @@
         <!-- Page 0: Opening -->
         <section id="page-0" class="page active">
             <div class="card intro-card">
-                <h1 data-i18n="opening_title">PHQ-9 Depression Screening</h1>
+                <h1 data-i18n="opening_title">PHQ-3 Depression Screening</h1>
                 <div class="info-text" data-i18n="opening_info">
-                    The Patient Health Questionnaire (PHQ-9) is a multipurpose instrument for screening, monitoring and measuring the severity of depression.
+                    The Patient Health Questionnaire-3 (PHQ-3) is a brief screening tool for depression, derived from
+                    the PHQ-9.
                 </div>
                 <div class="instructions-box">
                     <h3 data-i18n="opening_instructions_title">Instructions</h3>
-                    <p data-i18n="opening_instructions">Over the last 2 weeks, how often have you been bothered by any of the following problems? Click "Next" to begin.</p>
+                    <p data-i18n="opening_instructions">Over the last 2 weeks, how often have you been bothered by any
+                        of the following problems? Click "Next" to begin.</p>
                 </div>
             </div>
             <div class="btn-container">
-                <button class="primary-btn pulse-animation" onclick="nextPage()" data-i18n="start_btn">Start Assessment</button>
+                <button class="primary-btn pulse-animation" onclick="nextPage()" data-i18n="start_btn">Start
+                    Assessment</button>
             </div>
         </section>
 
         <!-- Dynamic Questions will be injected here or hardcoded for simplicity in SPA -->
         <!-- For performance and SEO/accessibility, let's hardcode the 9 question sections -->
-        
+
         <!-- Questions 1-9 -->
         <div id="questions-container"></div>
 
@@ -61,18 +66,16 @@
         <section id="page-summary" class="page">
             <div class="card summary-card">
                 <h2 data-i18n="summary_title">Screening Results</h2>
-                
+
                 <div class="summary-score-big">
-                    <span id="final-score">0</span><span>/27</span>
+                    <span id="final-score">0</span><span>/9</span>
                 </div>
 
                 <div class="score-progress-container">
                     <div class="score-progress-bar">
-                        <div class="score-range minimal"></div>
-                        <div class="score-range mild"></div>
-                        <div class="score-range moderate"></div>
-                        <div class="score-range mod-severe"></div>
-                        <div class="score-range severe"></div>
+                        <div class="score-range minimal" style="width: 33.33%;"></div>
+                        <div class="score-range mild" style="width: 33.33%;"></div>
+                        <div class="score-range severe" style="width: 33.34%;"></div>
                     </div>
                     <div class="score-arrow-container">
                         <div id="score-arrow" class="score-arrow">
