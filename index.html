@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PHQ-9 Depression Screening</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="version-tag">v1.0</div>
+        <div class="banner-top">
+            <button id="back-btn" class="back-btn" onclick="prevPage()" style="visibility: hidden;">
+                <i class="fas fa-arrow-left"></i>
+                <span class="back-text" data-i18n="back_text">back</span>
+            </button>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+                <button class="lang-btn" onclick="setLanguage('he')">עברית</button>
+            </div>
+            <div class="score-display">
+                <span data-i18n="score_label">Score</span>
+                <span class="score-badge">
+                    <span id="total-score">0</span><span class="score-max">/27</span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main id="app-container">
+        <!-- Page 0: Opening -->
+        <section id="page-0" class="page active">
+            <div class="card intro-card">
+                <h1 data-i18n="opening_title">PHQ-9 Depression Screening</h1>
+                <div class="info-text" data-i18n="opening_info">
+                    The Patient Health Questionnaire (PHQ-9) is a multipurpose instrument for screening, monitoring and measuring the severity of depression.
+                </div>
+                <div class="instructions-box">
+                    <h3 data-i18n="opening_instructions_title">Instructions</h3>
+                    <p data-i18n="opening_instructions">Over the last 2 weeks, how often have you been bothered by any of the following problems? Click "Next" to begin.</p>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="primary-btn pulse-animation" onclick="nextPage()" data-i18n="start_btn">Start Assessment</button>
+            </div>
+        </section>
+
+        <!-- Dynamic Questions will be injected here or hardcoded for simplicity in SPA -->
+        <!-- For performance and SEO/accessibility, let's hardcode the 9 question sections -->
+        
+        <!-- Questions 1-9 -->
+        <div id="questions-container"></div>
+
+        <!-- Summary Page -->
+        <section id="page-summary" class="page">
+            <div class="card summary-card">
+                <h2 data-i18n="summary_title">Screening Results</h2>
+                
+                <div class="summary-score-big">
+                    <span id="final-score">0</span><span>/27</span>
+                </div>
+
+                <div class="score-progress-container">
+                    <div class="score-progress-bar">
+                        <div class="score-range minimal"></div>
+                        <div class="score-range mild"></div>
+                        <div class="score-range moderate"></div>
+                        <div class="score-range mod-severe"></div>
+                        <div class="score-range severe"></div>
+                    </div>
+                    <div class="score-arrow-container">
+                        <div id="score-arrow" class="score-arrow">
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="implication-box">
+                    <strong id="interpretation-label" data-i18n="interpretation_label">Interpretation:</strong>
+                    <p id="interpretation-text"></p>
+                </div>
+
+                <div class="summary-breakdown" id="summary-breakdown">
+                    <h3 data-i18n="breakdown_title">Responses Breakdown</h3>
+                    <ul id="responses-list"></ul>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="secondary-btn" onclick="restartTest()" data-i18n="restart_btn">Restart</button>
+                <button class="primary-btn" onclick="emailReport()" data-i18n="email_btn">
+                    <i class="fas fa-envelope"></i> <span data-i18n="email_btn_text">Email Report</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
