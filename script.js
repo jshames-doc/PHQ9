@@ -3,7 +3,7 @@ const translations = {
         back_text: "Back",
         score_label: "Score",
         opening_title: "PHQ-3 Depression Screening",
-        opening_info: "The Patient Health Questionnaire-3 (PHQ-3) is a brief screening tool for depression, derived from the PHQ-9.",
+        opening_info: "The Patient Health Questionnaire-3 (PHQ-3) is a brief screening tool for depression.",
         opening_instructions_title: "Instructions",
         opening_instructions: "Over the last 2 weeks, how often have you been bothered by any of the following problems? Click \"Next\" to begin.",
         start_btn: "Start Assessment",
@@ -29,7 +29,7 @@ const translations = {
         ],
         interpretations: [
             { max: 2, label: "Minimal", note: "Low risk for depression. No specific intervention required." },
-            { max: 5, label: "Mild/Moderate", note: "Potential depression. Consider clinical follow-up or further screening (PHQ-9)." },
+            { max: 5, label: "Mild/Moderate", note: "Potential depression. Consider clinical follow-up or further screening." },
             { max: 9, label: "High Risk", note: "High risk for major depression. Clinical assessment and further screening is strongly recommended." }
         ],
         email_subject: "PHQ-3 Screening Results",
@@ -41,7 +41,7 @@ const translations = {
         back_text: "חזור",
         score_label: "ציון",
         opening_title: "שאלון PHQ-3 לאבחון דיכאון",
-        opening_info: "שאלון בריאות המטופל-3 (PHQ-3) הוא כלי קצר לסריקת דיכאון, הנגזר משאלון PHQ-9.",
+        opening_info: "שאלון בריאות המטופל-3 (PHQ-3) הוא כלי קצר לסריקת דיכאון.",
         opening_instructions_title: "הוראות",
         opening_instructions: "במהלך השבועיים האחרונים, באיזו תדירות הוטרדת על ידי הבעיות הבאות? לחץ על \"הבא\" כדי להתחיל.",
         start_btn: "התחל הערכה",
@@ -67,7 +67,7 @@ const translations = {
         ],
         interpretations: [
             { max: 2, label: "מינימלי", note: "סיכון נמוך לדיכאון. לא נדרשת התערבות ספציפית." },
-            { max: 5, label: "קל/בינוני", note: "חשד לדיכאון. מומלץ מעקב קליני או ביצוע שאלון מורחב (PHQ-9)." },
+            { max: 5, label: "קל/בינוני", note: "חשד לדיכאון. מומלץ מעקב קליני או ביצוע שאלון מורחב." },
             { max: 9, label: "סיכון גבוה", note: "סיכון גבוה לדיכאון מז'ורי. מומלץ מאוד ביצוע הערכה קלינית מקיפה." }
         ],
         email_subject: "תוצאות שאלון PHQ-3",
