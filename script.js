@@ -182,7 +182,12 @@ function handleOptionSelect(qIdx, score) {
     // Auto-advance after a short delay for better UX
     setTimeout(() => {
         nextPage();
-    }, 400);
+        // Smooth scroll to next item for better clinical flow
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, 500);
 }
 
 function nextPage() {
